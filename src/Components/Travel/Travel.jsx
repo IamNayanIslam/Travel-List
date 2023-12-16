@@ -56,7 +56,7 @@ export default function Travel() {
         removeItem={removeItem}
         togglePacked={togglePacked}
       />
-      <Stats />
+      <Stats items={items} />
     </div>
   );
 }
