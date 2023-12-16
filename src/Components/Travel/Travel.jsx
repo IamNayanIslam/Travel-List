@@ -10,6 +10,14 @@ export default function Travel() {
   const [quantity, setQuantity] = useState(1);
   const [items, setItems] = useState([]);
 
+  function handleReset() {
+    const confirm = window.confirm(
+      "Are you sure you want to delete all items?"
+    );
+
+    if (confirm) setItems([]);
+  }
+
   function removeItem(id) {
     setItems(items.filter((item) => item.id !== id));
   }
@@ -55,6 +63,7 @@ export default function Travel() {
         items={items}
         removeItem={removeItem}
         togglePacked={togglePacked}
+        handleReset={handleReset}
       />
       <Stats items={items} />
     </div>
