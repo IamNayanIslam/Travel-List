@@ -8,20 +8,38 @@ import "./Travel.css";
 export default function Travel() {
   const [description, setDescription] = useState("");
   const [quantity, setQuantity] = useState(1);
+  const [items, setItems] = useState([]);
+
+  function removeItem(id) {
+    setItems(items.filter((item) => item.id !== id));
+  }
+
+  function togglePacked(id) {
+    setItems((items) =>
+      items.map((item) =>
+        item.id === id ? { ...item, packed: !item.packed } : item
+      )
+    );
+  }
+
+  function handleAddItems(item) {
+    setItems((items) => [...items, item]);
+  }
+
   function handleSubmit(event) {
     event.preventDefault();
     if (!description) return alert("You must insert a Item Name!");
-    const items = {
+    const newItems = {
       description,
       quantity,
       packed: false,
       id: Date.now(),
     };
-
+    handleAddItems(newItems);
     setDescription("");
     setQuantity(1);
 
-    console.log(items);
+    console.log(newItems);
   }
   return (
     <div className="app">
@@ -33,7 +51,11 @@ export default function Travel() {
         quantity={quantity}
         setQuantity={setQuantity}
       />
-      <PackingList />
+      <PackingList
+        items={items}
+        removeItem={removeItem}
+        togglePacked={togglePacked}
+      />
       <Stats />
     </div>
   );
