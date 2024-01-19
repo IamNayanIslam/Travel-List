@@ -1,8 +1,53 @@
-# React + Vite
+# Travel Packing List App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React-based Travel Packing List app to help users organize and manage their travel essentials efficiently.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Select item quantity.
+- Insert item names.
+- Tick mark packed items.
+- Delete unnecessary items.
+- Sort items based on input, packing status, and description.
+- Clear list button for convenience.
+
+## Statistics Section
+
+At the bottom of the app, there is a statistics section that provides the following information:
+
+- Number of items packed.
+- Percentage of items packed.
+- Total items in the list.
+
+## Technologies Used
+
+- React
+- HTML
+- CSS
+- JavaScript
+- Yarn
+- Vite
+
+## Getting Started
+
+To run this application locally, follow these steps:
+
+1. Clone the repository:
+
+```bash
+git clone[https://github.com/your-username/travel-packing-list.git
+
+**Navigate to the project directory:**
+```bash
+cd Travel-List
+
+**Install dependencies using Yarn:**
+```bash
+yarn
+
+**Run the development server with Vite:**
+```bash
+yarn dev
+
+**The app will be accessible at** http://localhost:5173 in your web browser.
+**Or you can visit:** [https://react-todo-list-app-orpin.vercel.app/](https://far-away-gamma.vercel.app/)https://far-away-gamma.vercel.app/
