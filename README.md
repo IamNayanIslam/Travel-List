@@ -50,4 +50,4 @@ yarn
 yarn dev
 
 **The app will be accessible at** http://localhost:5173 in your web browser.
-**Or you can visit:** [https://react-todo-list-app-orpin.vercel.app/](https://far-away-gamma.vercel.app/)https://far-away-gamma.vercel.app/
+**Or you can visit:** https://far-away-gamma.vercel.app/
